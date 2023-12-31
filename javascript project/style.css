@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+    --theme-color: #B33771;
+}
+body{
+    background-color:#2c2c54;
+    height:100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.analog-clock{
+    width:500px;
+    height:500px;
+    background-color:#fff;
+    border-radius:50%;
+    border:8px solid var(--theme-color);
+    position: relative;
+}
+.analog-clock::before{
+    content:'Pavi';
+    color: var(--theme-color);
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+    font-family: 'Lobster',cursive;
+
+}
+.analog-clock::after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--theme-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10;
+}
+.number{
+    --rotate:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   text-align: center;
+    font-size: 25px;
+    color: var(--theme-color);
+    transform: rotate(var(--rotate));
+}
+.number-1{--rotate:30deg;}
+.number-2{--rotate:60deg}
+.number-3{--rotate:90deg}
+.number-4{--rotate:120deg}
+.number-5{--rotate:150deg}
+.number-6{--rotate:180deg}
+.number-7{--rotate:210deg}
+.number-8{--rotate:240deg}
+.number-9{--rotate:270deg}
+.number-10{--rotate:300deg}
+.number-11{--rotate:330deg}
+.number-6 p{
+    transform: rotate(-180deg);
+}
+.number-7 p{
+    transform: rotate(-210deg);
+}
+.number-8 p{
+    transform: rotate(-240deg);
+}
+.number-9 p{
+    transform: rotate(-270deg);
+}
+.number-10 p{
+    transform: rotate(-300deg);
+}
+.number-11 p{
+    transform: rotate(-330deg);
+}
+.number-1 p{
+    transform: rotate(-30deg);
+}
+.number-2 p{
+    transform: rotate(-60deg);
+}
+.number-3 p{
+    transform: rotate(-90deg);
+}
+.number-4 p{
+    transform: rotate(-120deg);
+}
+.number-5 p{
+    transform: rotate(-150deg);
+}
+
+
+.needle{
+    --rotation:0;
+    position:absolute;
+    bottom: 50%;
+    left: 50%;
+    width: 10px;
+    height: 40%;
+    transform-origin: bottom;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+      z-index: 8;
+    border: 1px solid black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+
+
+} 
+ .sec{
+    background-color: #B33771;
+    width:3px;
+    height: 45%;
+        
+} 
+ .min{
+    background-color: black;
+    width:7px;
+    height: 40%;
+} 
+ .hrs{
+    background-color: black;
+    width:10px;
+    height: 25%;
+ 
+} 
+.month{
+    position: absolute;
+    top:20%;
+    left:46%;
+    background-color:var(--theme-color);
+    border:3px  solid var(--theme-color)
+}
+.date{
+    position: absolute;
+    top:20%;
+    left:53%;
+    background-color:var(--theme-color);
+    border:3px  solid var(--theme-color);
+}
